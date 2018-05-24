@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Link } from "react-router-dom";
-import HomeContainer from "./containers/homeContainer.js";
+import IngredientsContainer from "./containers/ingredientsContainer.js";
 
 const App = () => (
   <div>
@@ -9,7 +9,7 @@ const App = () => (
     </header>
 
     <main>
-      <Route exact path="/" component={HomeContainer} />
+      <Route exact path="/" component={IngredientsContainer} />
     </main>
   </div>
 );
