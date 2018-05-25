@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import IngredientsContainer from '../containers/ingredientsContainer';
 import CocktailsContainer from '../containers/cocktailsContainer';
+import RecipeContainer from '../containers/recipeContainer';
 
 export default class MainContentWrapper extends Component {
   render() {
@@ -12,6 +13,9 @@ export default class MainContentWrapper extends Component {
         </ContentColumn>
         <ContentColumn>
           <CocktailsContainer />
+        </ContentColumn>
+        <ContentColumn>
+          <RecipeContainer />
         </ContentColumn>
       </ContentWrapper>
     )

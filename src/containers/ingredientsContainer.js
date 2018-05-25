@@ -1,7 +1,7 @@
-import { push } from "react-router-redux";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import Ingredients from "../components/ingredients.js";
+import { push } from 'react-router-redux';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import Ingredients from '../components/ingredients.js';
 import { getAllIngredients, filterIngredients } from '../actions/ingredientsActions';
 
 const mapStateToProps = state => ({

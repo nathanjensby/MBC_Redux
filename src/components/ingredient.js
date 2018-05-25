@@ -32,5 +32,5 @@ export default class Ingredient extends Component {
 };
 
 const IngredientsWrapper = styled.article`
-  
+
 `
