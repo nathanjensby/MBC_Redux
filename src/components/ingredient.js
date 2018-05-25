@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 export default class Ingredient extends Component {
@@ -19,13 +20,17 @@ export default class Ingredient extends Component {
   render() {
     const { isSelected, name } = this.props;
     return (
-      <div className="ingredient">
+      <IngredientsWrapper>
         <label>
           <input type="checkbox" checked={isSelected} onChange={this.toggleCheck}>
           </input>
           {name}
         </label>
-      </div>
+      </IngredientsWrapper>
     )
   }
 };
+
+const IngredientsWrapper = styled.article`
+  
+`

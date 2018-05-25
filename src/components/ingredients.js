@@ -13,9 +13,9 @@ export default class Ingredients extends Component {
   }
 
   handleSearch = (event) => {
-    const { filterItems } = this.props;
+    const { filterIngredients } = this.props;
     const searchText = event.target.value;
-    filterItems(searchText);
+    filterIngredients(searchText);
     this.setState({ searchText });
   }
 
@@ -25,7 +25,7 @@ export default class Ingredients extends Component {
     selectedIngredients: PropTypes.arrayOf(PropTypes.number),
     changePage: PropTypes.func.isRequired,
     getAllIngredients: PropTypes.func.isRequired,
-    filterItems: PropTypes.func.isRequired,
+    filterIngredients: PropTypes.func.isRequired,
   };
 
   static defaultProps = {

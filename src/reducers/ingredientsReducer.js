@@ -4,7 +4,7 @@ const {
   SET_INGREDIENTS,
   ADD_TO_SELECTED_INGREDIENTS,
   REMOVE_FROM_SELECTED_INGREDIENTS,
-  FILTER_ITEMS,
+  FILTER_INGREDIENTS,
 } = ActionTypes;
 
 const defaultIngredientsReducerState = {
@@ -31,7 +31,7 @@ const ingredientsReducer = (state = defaultIngredientsReducerState, action) => {
         selectedIngredients: state.selectedIngredients.filter((ingredient, index) => index !== ingredientIndex),
       })
     }
-    case FILTER_ITEMS: {
+    case FILTER_INGREDIENTS: {
       return Object.assign({}, state, {
         filteredIngredients: state.ingredients.filter((ingredient) => (
           ingredient.name.toLowerCase().startsWith(action.payload.string.toLowerCase())
