@@ -5,7 +5,7 @@ const {
   SET_INGREDIENTS,
   ADD_TO_SELECTED_INGREDIENTS,
   REMOVE_FROM_SELECTED_INGREDIENTS,
-  FILTER_ITEMS,
+  FILTER_INGREDIENTS,
 } = ActionTypes;
 
 const setIngredients = (ingredients) => ({
@@ -29,8 +29,8 @@ const removeIngredientById = (ingredientId) => ({
   }
 });
 
-const filterItemsByString = (string) => ({
-  type: FILTER_ITEMS,
+const filterIngredientsByString = (string) => ({
+  type: FILTER_INGREDIENTS,
   payload: {
     string,
   }
@@ -51,13 +51,13 @@ const removeFromSelectedIngredients = (ingredientId) => (dispatch, getState) => 
   return dispatch(removeIngredientById(ingredientId))
   };
 
-  const filterItems = (string) => (dispatch, getState) => {
-    return dispatch(filterItemsByString(string))
+  const filterIngredients = (string) => (dispatch, getState) => {
+    return dispatch(filterIngredientsByString(string))
   };
 
 export {
   getAllIngredients,
   addToSelectedIngredients,
   removeFromSelectedIngredients,
-  filterItems,
+  filterIngredients,
 };

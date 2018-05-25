@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import IngredientContainer from '../containers/ingredientContainer';
 
 export default class Ingredients extends Component {
@@ -12,11 +13,26 @@ export default class Ingredients extends Component {
   }
 
   handleSearch = (event) => {
-    const { filterItems } = this.props;
+    const { filterIngredients } = this.props;
     const searchText = event.target.value;
-    filterItems(searchText);
+    filterIngredients(searchText);
     this.setState({ searchText });
   }
+
+  static propTypes = {
+    ingredients: PropTypes.array,
+    filteredIngredients: PropTypes.array,
+    selectedIngredients: PropTypes.arrayOf(PropTypes.number),
+    changePage: PropTypes.func.isRequired,
+    getAllIngredients: PropTypes.func.isRequired,
+    filterIngredients: PropTypes.func.isRequired,
+  };
+
+  static defaultProps = {
+    ingredients: [],
+    filteredIngredients: [],
+    selectedIngredients: [],
+  };
 
 
   render() {

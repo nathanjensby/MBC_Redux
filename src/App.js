@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Link } from "react-router-dom";
-import IngredientsContainer from "./containers/ingredientsContainer.js";
+import MainContentWrapper from "./components/mainContentWrapper.js";
 
 const App = () => (
   <div>
@@ -9,7 +9,7 @@ const App = () => (
     </header>
 
     <main>
-      <Route exact path="/" component={IngredientsContainer} />
+      <Route exact path="/" component={MainContentWrapper} />
     </main>
   </div>
 );
