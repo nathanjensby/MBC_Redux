@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-const { any, array, arrayOf, bool, date, object, objectOf, oneOf, oneOfType, number, shape, string } = PropTypes;
+const { arrayOf, number, shape, string } = PropTypes;
 
 const IngredientPropTypes = shape({
   id: number,

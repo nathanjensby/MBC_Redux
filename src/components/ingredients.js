@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { IngredientPropTypes } from '../util/shapes';
 import IngredientContainer from '../containers/ingredientContainer';
 
 export default class Ingredients extends Component {
@@ -20,7 +22,7 @@ export default class Ingredients extends Component {
   }
 
   static propTypes = {
-    ingredients: PropTypes.array,
+    ingredients: PropTypes.arrayOf(IngredientPropTypes),
     filteredIngredients: PropTypes.array,
     selectedIngredients: PropTypes.arrayOf(PropTypes.number),
     changePage: PropTypes.func.isRequired,
@@ -36,7 +38,7 @@ export default class Ingredients extends Component {
 
 
   render() {
-    const { filteredIngredients, ingredients, changePage, selectedIngredients } = this.props;
+    const { filteredIngredients, ingredients, selectedIngredients } = this.props;
     const { searchText } = this.state;
     const ingredientsHTML = (filteredIngredients.length > 0 ? filteredIngredients : ingredients)
       .map((ingredient, index) => (
@@ -47,16 +49,21 @@ export default class Ingredients extends Component {
         />
       ))
     return (
-      <div>
+      <IngredientsWrapper>
         <h1>Ingredients</h1>
-        <div>
+        <SearchWrapper>
           <input type="text" placeholder="Search" value={searchText} onChange={this.handleSearch} />
-        </div>
+        </SearchWrapper>
         {ingredientsHTML}
-        <button onClick={() => changePage()}>
+        {/* <button onClick={() => changePage()}>
           Go to about page via redux
-        </button>
-      </div>
+        </button> */}
+      </IngredientsWrapper>
     )
   }
 };
+
+const IngredientsWrapper = styled.main``;
+const SearchWrapper = styled.div`
+  padding: 10px;
+`;
