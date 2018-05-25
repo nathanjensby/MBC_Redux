@@ -27,8 +27,16 @@ export default class Cocktails extends Component {
     return (
       <div>
         <h1>Cocktails</h1>
-        {cocktailsHTML}
+        <CocktailsListWrapper>
+          {cocktailsHTML}
+        </CocktailsListWrapper>
       </div>
     )
   }
 };
+
+const CocktailsListWrapper = styled.section`
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+`;

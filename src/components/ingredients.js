@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Colors from '../util/colors';
 import IngredientContainer from '../containers/ingredientContainer';
 
 export default class Ingredients extends Component {
@@ -47,16 +49,21 @@ export default class Ingredients extends Component {
         />
       ))
     return (
-      <div>
+      <IngredientsWrapper>
         <h1>Ingredients</h1>
-        <div>
+        <SearchWrapper>
           <input type="text" placeholder="Search" value={searchText} onChange={this.handleSearch} />
-        </div>
+        </SearchWrapper>
         {ingredientsHTML}
-        <button onClick={() => changePage()}>
+        {/* <button onClick={() => changePage()}>
           Go to about page via redux
-        </button>
-      </div>
+        </button> */}
+      </IngredientsWrapper>
     )
   }
 };
+
+const IngredientsWrapper = styled.main``;
+const SearchWrapper = styled.div`
+  padding: 10px;
+`;

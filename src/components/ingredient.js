@@ -22,8 +22,7 @@ export default class Ingredient extends Component {
     return (
       <IngredientsWrapper>
         <label>
-          <input type="checkbox" checked={isSelected} onChange={this.toggleCheck}>
-          </input>
+          <input type="checkbox" checked={isSelected} onChange={this.toggleCheck} />
           {name}
         </label>
       </IngredientsWrapper>

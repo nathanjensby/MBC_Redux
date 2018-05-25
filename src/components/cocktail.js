@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Colors from '../util/colors';
 import { CocktailPropTypes } from '../util/shapes';
 
 export default class Cocktail extends Component {
@@ -26,5 +27,10 @@ export default class Cocktail extends Component {
 }
 
 const CocktailButton = styled.button`
+  color: ${Colors.pearl.hex};
+  background-color: ${Colors.calypso.hex};
+  border: 1px ${Colors.arapawa.hex} solid;
+  border-radius: 2px;
+  max-width: 150px;
   padding: 10px;
 `;
