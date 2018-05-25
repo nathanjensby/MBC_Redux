@@ -8,10 +8,10 @@ export default class Recipe extends Component {
   }
 
   render() {
-    const { selectedCocktail, selectedCocktail: { measurements, items, instructions } } = this.props;
+    const { selectedCocktail: { measurements, items, instructions } } = this.props;
 
     const ingredientsHTML = measurements && measurements.map((measurement, index) => (
-      <li>
+      <li key={index}>
         {`
           ${measurement.amount} ${items.filter((item) => item.id === measurement.item_id)[0].name}
         `}

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import CocktailContainer from '../containers/cocktailContainer';
 
 export default class Cocktails extends Component {

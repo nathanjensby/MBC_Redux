@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Colors from './util/colors';
 import styled from 'styled-components';
 import MainContentWrapper from './components/mainContentWrapper.js';
