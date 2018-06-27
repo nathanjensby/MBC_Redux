@@ -21,13 +21,20 @@ const App = () => (
 export default App;
 
 const AppWrapper = styled.div`
-  background-color: ${Colors.teal.hex};
+  background-color: ${Colors.surf.hex};
+  color: ${Colors.pickledBluewood.hex};
+  font-family: 'Montserrat', sans-serif;
 `;
 
 const Title = styled.header`
+  box-shadow: -3px 3px 6px white;
+  position: relative;
   text-align: center;
 
   h1 {
+    font-family: 'Sacramento', cursive;
+    text-shadow: -3px 3px 6px white;
+    font-size: 72px;
     padding: 50px;
     margin: 0;
   }

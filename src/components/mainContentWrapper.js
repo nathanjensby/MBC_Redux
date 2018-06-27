@@ -24,13 +24,14 @@ export default class MainContentWrapper extends Component {
 };
 
 const ContentWrapper = styled.main`
-  background-color: ${Colors.arapawa.hex};
+  background-color: ${Colors.purple.hex};
   display: flex;
   padding: 20px;
 `;
 
 const ContentColumn = styled.article`
-  background-color: ${Colors.teal.hex};
+  background-color: ${Colors.surf.hex};
+  box-shadow: -3px 3px 6px white;
   flex: 1;
   margin: 20px;
   padding: 20px;

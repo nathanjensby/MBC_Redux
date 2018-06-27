@@ -55,15 +55,18 @@ export default class Ingredients extends Component {
           <input type="text" placeholder="Search" value={searchText} onChange={this.handleSearch} />
         </SearchWrapper>
         {ingredientsHTML}
-        {/* <button onClick={() => changePage()}>
-          Go to about page via redux
-        </button> */}
       </IngredientsWrapper>
     )
   }
 };
 
-const IngredientsWrapper = styled.main``;
+const IngredientsWrapper = styled.main`
+  h1 {
+    font-family: 'Sacramento', cursive;
+    text-shadow: -3px 3px 6px white;
+    font-size: 48px;
+  }
+`;
 const SearchWrapper = styled.div`
   padding: 10px;
 `;
