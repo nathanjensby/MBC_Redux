@@ -20,7 +20,7 @@ export default class Recipe extends Component {
 
     return (
       <RecipeWrapper>
-        <h1>Recipe</h1>
+        <h1 className="title">Recipe</h1>
         <ul>
           {ingredientsHTML}
         </ul>
@@ -32,5 +32,11 @@ export default class Recipe extends Component {
   }
 };
 
-const RecipeWrapper = styled.main``;
+const RecipeWrapper = styled.main`
+  h1 {
+    font-family: 'Sacramento', cursive;
+    text-shadow: -3px 3px 6px white;
+    font-size: 48px;
+  }
+`;
 const InstructionsWrapper = styled.div``;

@@ -27,10 +27,11 @@ export default class Cocktail extends Component {
 }
 
 const CocktailButton = styled.button`
-  color: ${Colors.pearl.hex};
-  background-color: ${Colors.calypso.hex};
-  border: 1px ${Colors.arapawa.hex} solid;
+  background-color: ${Colors.golden.hex};
+  border: 1px ${Colors.pickledBluewood.hex} solid;
   border-radius: 2px;
+  color: ${Colors.pickledBluewood.hex};
+  font-size: 14px;
   max-width: 150px;
   padding: 10px;
 `;

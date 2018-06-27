@@ -24,15 +24,23 @@ export default class Cocktails extends Component {
       />
     ))
     return (
-      <div>
+      <CocktailsWrapper>
         <h1>Cocktails</h1>
         <CocktailsListWrapper>
           {cocktailsHTML}
         </CocktailsListWrapper>
-      </div>
+      </CocktailsWrapper>
     )
   }
 };
+
+const CocktailsWrapper = styled.div`
+  h1 {
+    font-family: 'Sacramento', cursive;
+    text-shadow: -3px 3px 6px white;
+    font-size: 48px;
+  }
+`;
 
 const CocktailsListWrapper = styled.section`
   display: grid;

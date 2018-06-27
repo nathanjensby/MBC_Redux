@@ -1,23 +1,23 @@
 const Colors = {
-  teal: {
-    hex: '#119da4',
-    rgb: '17, 157, 164',
+  surf: {
+    hex: '#BDD9BF',
+    rgb: '189, 217, 191',
   },
-  calypso: {
-    hex: '#0c7489',
-    rgb: '12, 116, 137',
+  pickledBluewood: {
+    hex: '#2E4052',
+    rgb: '46, 64, 82',
   },
-  arapawa: {
-    hex: '#13505b',
-    rgb: '19, 80, 91',
+  golden: {
+    hex: '#FFC857',
+    rgb: '255, 200, 87',
   },
-  black: {
-    hex: '#040404',
-    rgb: '4, 4, 4',
+  white: {
+    hex: '#FFFFFF',
+    rgb: '255, 255, 255',
   },
-  pearl: {
-    hex: '#d7d9ce',
-    rgb: '215, 217, 206',
+  purple: {
+    hex: '#412234',
+    rgb: '65, 34, 52',
   },
 };
 
